@@ -1,6 +1,6 @@
-const mangoose = require("mangoose");
+const mongoose = require("mongoose");
 
-const ProductSchema = mangoose.Schema({
+const ProductSchema = mongoose.Schema({
     name:{
         type: String,
         required: true
@@ -9,7 +9,7 @@ const ProductSchema = mangoose.Schema({
         type:String
     },
     _category: {
-        type: mangoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"categories"
     },
     image: {
@@ -21,5 +21,5 @@ const ProductSchema = mangoose.Schema({
     },
 });     
 
-const Product = mangoose.model("Product",ProductSchema);
+const Product = mongoose.model("Product",ProductSchema);
 module.exports = { Product };

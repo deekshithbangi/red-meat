@@ -1,4 +1,4 @@
-const mangoose = require("mangoose");
+const mongoose = require("mongoose");
 
 const categorySchema = mangoose.Schema({
     name:{
@@ -10,5 +10,5 @@ const categorySchema = mangoose.Schema({
     }
 })       
 
-const Category = mangoose.model("categories",categorySchema);
+const Category = mongoose.model("categories",categorySchema);
 module.exports = Category;
